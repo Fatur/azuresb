@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 
 namespace WebService1Contract
 {
     [ServiceContract(Namespace = "urn:ps")]
     public interface IProblemSolver
     {
-        [OperationContract]
+        [OperationContract, WebGet]
         int AddNumbers(int a, int b);
-        [OperationContract]
+        [OperationContract, WebGet]
         string GetBigString();
     }
 
