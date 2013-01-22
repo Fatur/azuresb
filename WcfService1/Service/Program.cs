@@ -33,7 +33,7 @@ namespace Service
             WebServiceHost host = new WebServiceHost(typeof(ProblemSolver), address);
 
             host.Open();
-
+           
             Console.WriteLine("Copy the following address into a browser to see the image: ");
             Console.WriteLine(address + "GetBigString");
             Console.WriteLine();
